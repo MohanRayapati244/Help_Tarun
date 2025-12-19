@@ -39,20 +39,9 @@ body{
   padding:20px;
   text-align:center;
 }
-h2{
-  margin:10px 0;
-  color:#333;
-}
-.subtitle{
-  color:#e84393;
-  font-weight:600;
-  margin-bottom:10px;
-}
-p{
-  font-size:14px;
-  color:#555;
-  line-height:1.6;
-}
+h2{margin:10px 0;color:#333;}
+.subtitle{color:#e84393;font-weight:600;margin-bottom:10px;}
+p{font-size:14px;color:#555;line-height:1.6;}
 .section{
   margin-top:15px;
   padding:12px;
@@ -91,11 +80,23 @@ input{
   border-radius:8px;
   border:1px solid #ccc;
 }
-.footer{
-  font-size:12px;
-  color:#777;
-  margin-top:10px;
+.share{
+  display:flex;
+  gap:10px;
+  margin-top:15px;
 }
+.share a{
+  flex:1;
+  padding:12px;
+  font-size:14px;
+  text-decoration:none;
+  color:#fff;
+  border-radius:10px;
+}
+.whatsapp{background:#25D366;}
+.facebook{background:#1877F2;}
+.instagram{background:#E1306C;}
+.footer{font-size:12px;color:#777;margin-top:10px;}
 </style>
 </head>
 
@@ -109,7 +110,6 @@ input{
 <h2>Support M. Tarun Sai</h2>
 <div class="subtitle">Age: 10 Years · Studying 6th Class</div>
 
-<!-- ENGLISH -->
 <p>
 M. Tarun Sai is a 10-year-old child from Udrajavaram, East Godavari District.
 He has been diagnosed with a brain tumor and needs urgent surgery.
@@ -119,24 +119,21 @@ We humbly request your support. Any donation, big or small, will help save a you
 Hospital and medical documents are provided below for transparency.
 </p>
 
-<!-- TELUGU -->
 <div class="section">
 <strong>తెలుగు సమాచారం:</strong><br><br>
 ఎం. తరుణ్ సాయి (వయస్సు 10 సంవత్సరాలు) ఉద్రాజవరం, తూర్పు గోదావరి జిల్లా నుండి.
 అతనికి మెదడు ట్యూమర్ ఉన్నట్లు గుర్తించబడింది మరియు తక్షణ శస్త్రచికిత్స అవసరం.
 అంచనా వైద్య ఖర్చు ₹2,00,000.
 <br><br>
-మీ సహాయం ఎంతో విలువైనది. మీకు సాధ్యమైనంత సహాయం చేయగలరు.
+మీకు సాధ్యమైనంత సహాయం చేయగలరు.
 పూర్తి నమ్మకానికి హాస్పిటల్ డాక్యుమెంట్లు క్రింద ఇవ్వబడ్డాయి.
 </div>
 
-<!-- PROGRESS -->
 <div style="margin-top:15px;">
-₹10,000 raised of ₹2,00,000
+₹70,000 raised of ₹2,00,000
 <div class="progress"><div class="progress-bar"></div></div>
 </div>
 
-<!-- DONATE -->
 <a class="btn" href="upi://pay?pa=9390199441@ibl&pn=MedicalSupport&am=100&cu=INR">Donate ₹100</a>
 <a class="btn" href="upi://pay?pa=9390199441@ibl&pn=MedicalSupport&am=500&cu=INR">Donate ₹500</a>
 
@@ -147,13 +144,25 @@ Hospital and medical documents are provided below for transparency.
 View Hospital Documents
 </a>
 
-<!-- DISCLAIMER -->
+<!-- SHARE BUTTONS -->
+<div class="share">
+  <a class="whatsapp" href="https://wa.me/?text=Please%20support%20M.%20Tarun%20Sai%20for%20brain%20tumor%20treatment.%20Every%20donation%20saves%20a%20life.%20https://MohanRayapati244.github.io/Help_Tarun/">
+    WhatsApp
+  </a>
+  <a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://MohanRayapati244.github.io/Help_Tarun/">
+    Facebook
+  </a>
+  <a class="instagram" href="#" onclick="copyLink()">
+    Copy Link
+  </a>
+</div>
+
 <div class="section">
 <strong>Important Note:</strong><br>
-* All donations go directly to the child’s father’s bank account only.<br>
-* No third party or middleman involved.<br>
-* No tax benefits are applicable for donations.<br>
-* Entire amount is used only for medical treatment.
+• Donations go directly to the father’s bank account only.<br>
+• No third party or middleman involved.<br>
+• No tax benefits are applicable.<br>
+• Full amount is used only for medical treatment.
 </div>
 
 <div class="footer">
@@ -163,6 +172,12 @@ Secure UPI payments · PhonePe · Google Pay · Paytm
 </div>
 </div>
 
+<script>
+function copyLink(){
+  navigator.clipboard.writeText("https://MohanRayapati244.github.io/Help_Tarun/");
+  alert("Link copied! Paste it in Instagram bio or story.");
+}
+</script>
+
 </body>
 </html>
-
