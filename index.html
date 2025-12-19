@@ -3,8 +3,22 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Support Tarun Sai</title>
+    <title>Help M. Tarun Sai | Medical Support</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SOCIAL MEDIA PREVIEW (IMPORTANT) -->
+    <meta property="og:title" content="Help M. Tarun Sai | Medical Support">
+    <meta property="og:description"
+        content="10-year-old Tarun Sai is fighting a brain tumor. Kindly support his urgent surgery. Every contribution saves a life.">
+    <meta property="og:image" content="https://YOUR-USERNAME.github.io/tarun-sai-donation/images/tarun.jpeg">
+    <meta property="og:url" content="https://YOUR-USERNAME.github.io/tarun-sai-donation/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Medical Support Fund">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Help M. Tarun Sai | Medical Support">
+    <meta name="twitter:description" content="Kindly support Tarun Sai’s brain tumor surgery. Every donation matters.">
+    <meta name="twitter:image" content="https://YOUR-USERNAME.github.io/tarun-sai-donation/images/tarun.jpeg">
 
     <style>
         body {
@@ -105,6 +119,11 @@
             box-sizing: border-box;
         }
 
+        #qr {
+            display: none;
+            margin-top: 15px;
+        }
+
         .share {
             display: flex;
             gap: 10px;
@@ -132,11 +151,6 @@
             background: #E1306C;
         }
 
-        #qr {
-            display: none;
-            margin-top: 15px;
-        }
-
         .footer {
             margin-top: 15px;
             font-size: 12px;
@@ -157,11 +171,23 @@
             <div class="subtitle">Age: 10 Years · Studying 6th Class</div>
 
             <p>
-                M. Tarun Sai, a 10-year-old child from Udrajavaram,
-                East Godavari District, is bravely fighting a brain tumor.
-                Doctors have advised urgent surgery costing ₹2,00,000.
-                We kindly request you to donate whatever you can.
-                Every small contribution brings hope and saves a life.
+                M. Tarun Sai is a 10-year-old boy, studying 6th class, from Udrajavaram, East Godavari District.
+
+                He has been diagnosed with a brain tumor and requires urgent surgery as advised by doctors. The total
+                medical cost is approximately ₹2,00,000.
+
+                This is a very difficult time for the family. With humility and hope, we kindly request your support.
+                Any donation, big or small, will help in saving a young life.
+
+                For complete transparency, all hospital and medical documents are provided below. We kindly request you
+                to please review them for verification.
+
+                Please note: All donations made through this page are directly credited to Tarun Sai’s father’s bank
+                account only. There is no third party involved, and no tax deductions or commissions are applied. The
+                full donated amount goes towards the child’s medical treatment.
+
+                If you are able to help, please donate as per your kindness and share this message with others.
+                Your support, prayers, and compassion can give this child a chance at a healthy future.
             </p>
 
             <div class="progress-box">
@@ -171,7 +197,7 @@
                 </div>
             </div>
 
-            <!-- FIXED AMOUNT -->
+            <!-- FIXED AMOUNT DONATION -->
             <a class="btn" href="upi://pay?pa=9390199441@ibl&pn=MedicalSupport&am=100&cu=INR"
                 onclick="handleUPI(event)">Donate ₹100</a>
             <a class="btn" href="upi://pay?pa=9390199441@ibl&pn=MedicalSupport&am=500&cu=INR"
@@ -181,10 +207,12 @@
             <input type="number" id="amount" placeholder="Enter custom amount (₹)">
             <a class="btn" href="#" onclick="customDonate()">Donate Custom Amount</a>
 
+            <!-- DOCUMENT -->
             <a class="btn doc-btn" href="documents/hospital-report.pdf" target="_blank">
                 View Hospital Documents
             </a>
 
+            <!-- QR FOR LAPTOP -->
             <div id="qr">
                 <p style="font-size:13px;color:#555;">
                     Scan this QR using PhonePe / Google Pay
@@ -192,16 +220,18 @@
                 <img src="images/upi-qr.jpeg" width="200">
             </div>
 
+            <!-- SHARE -->
             <div class="share">
                 <a class="whatsapp"
-                    href="https://wa.me/?text=Please%20support%20M.%20Tarun%20Sai%20for%20brain%20tumor%20treatment.%20Your%20help%20can%20save%20a%20life.">
+                    href="https://wa.me/?text=Please%20support%20M.%20Tarun%20Sai%20for%20brain%20tumor%20treatment.%20Every%20donation%20saves%20a%20life.%20https://YOUR-USERNAME.github.io/tarun-sai-donation/">
                     WhatsApp
                 </a>
-                <a class="facebook" href="https://www.facebook.com/sharer/sharer.php">
+                <a class="facebook"
+                    href="https://www.facebook.com/sharer/sharer.php?u=https://YOUR-USERNAME.github.io/tarun-sai-donation/">
                     Facebook
                 </a>
-                <a class="instagram" href="#">
-                    Instagram
+                <a class="instagram" href="#" onclick="copyLink()">
+                    Copy Link
                 </a>
             </div>
 
@@ -228,6 +258,11 @@
             }
             const url = `upi://pay?pa=9390199441@ibl&pn=MedicalSupport&am=${amt}&cu=INR`;
             window.location.href = url;
+        }
+
+        function copyLink() {
+            navigator.clipboard.writeText(window.location.href);
+            alert("Link copied! Paste it in Instagram bio or story.");
         }
     </script>
 
