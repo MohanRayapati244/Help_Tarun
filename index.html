@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Support Tarun Sai</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #ff6a88, #ff99ac);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card {
+            background: #fff;
+            max-width: 420px;
+            width: 100%;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .content {
+            padding: 20px;
+            text-align: center;
+        }
+
+        h2 {
+            margin: 10px 0 5px;
+            color: #333;
+        }
+
+        .subtitle {
+            color: #e84393;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        p {
+            font-size: 14px;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .progress-box {
+            margin: 18px 0;
+        }
+
+        .progress-text {
+            font-size: 13px;
+            margin-bottom: 6px;
+        }
+
+        .progress {
+            background: #eee;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            width: 35%;
+            height: 14px;
+            background: linear-gradient(90deg, #ff4b6e, #ff6a88);
+        }
+
+        .btn {
+            display: block;
+            margin: 10px 0;
+            padding: 15px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 12px;
+            text-decoration: none;
+            color: #fff;
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+        }
+
+        .btn:hover {
+            opacity: 0.9;
+        }
+
+        .doc-btn {
+            background: #00b894;
+        }
+
+        input {
+            width: 100%;
+            padding: 14px;
+            font-size: 16px;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+            margin-top: 10px;
+            box-sizing: border-box;
+        }
+
+        .share {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .share a {
+            flex: 1;
+            padding: 12px;
+            font-size: 14px;
+            text-decoration: none;
+            color: #fff;
+            border-radius: 10px;
+        }
+
+        .whatsapp {
+            background: #25D366;
+        }
+
+        .facebook {
+            background: #1877F2;
+        }
+
+        .instagram {
+            background: #E1306C;
+        }
+
+        #qr {
+            display: none;
+            margin-top: 15px;
+        }
+
+        .footer {
+            margin-top: 15px;
+            font-size: 12px;
+            color: #777;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card">
+
+        <img src="images/tarun.jpeg" alt="M. Tarun Sai">
+
+        <div class="content">
+
+            <h2>Support M. Tarun Sai</h2>
+            <div class="subtitle">Age: 10 Years · Studying 6th Class</div>
+
+            <p>
+                M. Tarun Sai, a 10-year-old child from Udrajavaram,
+                East Godavari District, is bravely fighting a brain tumor.
+                Doctors have advised urgent surgery costing ₹2,00,000.
+                We kindly request you to donate whatever you can.
+                Every small contribution brings hope and saves a life.
+            </p>
+
+            <div class="progress-box">
+                <div class="progress-text">₹70,000 raised of ₹2,00,000</div>
+                <div class="progress">
+                    <div class="progress-bar"></div>
+                </div>
+            </div>
+
+            <!-- FIXED AMOUNT -->
+            <a class="btn" href="upi://pay?pa=9390199441@ibl&pn=MedicalSupport&am=100&cu=INR"
+                onclick="handleUPI(event)">Donate ₹100</a>
+            <a class="btn" href="upi://pay?pa=9390199441@ibl&pn=MedicalSupport&am=500&cu=INR"
+                onclick="handleUPI(event)">Donate ₹500</a>
+
+            <!-- CUSTOM AMOUNT -->
+            <input type="number" id="amount" placeholder="Enter custom amount (₹)">
+            <a class="btn" href="#" onclick="customDonate()">Donate Custom Amount</a>
+
+            <a class="btn doc-btn" href="documents/hospital-report.pdf" target="_blank">
+                View Hospital Documents
+            </a>
+
+            <div id="qr">
+                <p style="font-size:13px;color:#555;">
+                    Scan this QR using PhonePe / Google Pay
+                </p>
+                <img src="images/upi-qr.jpeg" width="200">
+            </div>
+
+            <div class="share">
+                <a class="whatsapp"
+                    href="https://wa.me/?text=Please%20support%20M.%20Tarun%20Sai%20for%20brain%20tumor%20treatment.%20Your%20help%20can%20save%20a%20life.">
+                    WhatsApp
+                </a>
+                <a class="facebook" href="https://www.facebook.com/sharer/sharer.php">
+                    Facebook
+                </a>
+                <a class="instagram" href="#">
+                    Instagram
+                </a>
+            </div>
+
+            <div class="footer">
+                100% secure UPI payments · PhonePe · Google Pay · Paytm
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function handleUPI(e) {
+            if (!/Android|iPhone|iPad/i.test(navigator.userAgent)) {
+                e.preventDefault();
+                document.getElementById("qr").style.display = "block";
+            }
+        }
+
+        function customDonate() {
+            const amt = document.getElementById("amount").value;
+            if (!amt || amt <= 0) {
+                alert("Please enter a valid amount");
+                return;
+            }
+            const url = `upi://pay?pa=9390199441@ibl&pn=MedicalSupport&am=${amt}&cu=INR`;
+            window.location.href = url;
+        }
+    </script>
+
+</body>
+
+</html>
