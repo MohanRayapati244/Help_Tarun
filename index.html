@@ -128,6 +128,40 @@
             text-align: left;
         }
 
+        /* SHARE BUTTONS */
+        .share-box {
+            margin-top: 12px;
+            text-align: center;
+        }
+
+        .share-buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: 8px;
+        }
+
+        .share-buttons a {
+            flex: 1;
+            padding: 10px;
+            font-size: 14px;
+            font-weight: 600;
+            text-decoration: none;
+            color: #fff;
+            border-radius: 8px;
+        }
+
+        .share-whatsapp {
+            background: #25D366;
+        }
+
+        .share-facebook {
+            background: #1877F2;
+        }
+
+        .share-instagram {
+            background: #E1306C;
+        }
+
         .footer {
             font-size: 12px;
             color: #777;
@@ -159,10 +193,9 @@
                 The family is going through a very difficult time. With humility and hope, we kindly
                 request your support. Any donation, big or small, can help save a young life.<br><br>
                 If you are unable to donate, we kindly request you to please share this message with others.
-                Your kindness, prayers, and support are deeply appreciated during this critical time.
-                Thank you for your understanding and compassion.<br><br>
+                Your kindness, prayers, and support are deeply appreciated.<br><br>
+                Thank you for your understanding and support.<br><br>
                 Best regards,<br>
-                M. Tarun Sai Family Team 🙏
 
             </div>
 
@@ -175,9 +208,7 @@
                 వినయంతో మరియు ఆశతో మీ సహాయాన్ని ప్రార్థిస్తున్నాము.
                 మీరు చేసే చిన్న సహాయం కూడా ఒక ప్రాణాన్ని కాపాడగలదు.<br><br>
                 మీరు సహాయం చేయలేకపోతే, దయచేసి ఈ సమాచారాన్ని ఇతరులతో పంచండి.
-                మీ ప్రార్థనలు మరియు సహకారం ఈ అత్యవసర సమయంలో ఎంతో విలువైనవి అని మేము భావిస్తున్నాము.
-                మీ సహకారానికి ముందుగానే ధన్యవాదాలు.<br><br>
-                దయచేసి మీరు సహాయం చేయలేకపోతే ఈ సమాచారాన్ని ఇతరులతో పంచండి.<br><br>
+                మీ ప్రార్థనలు మరియు సహకారం ఈ అత్యవసర సమయంలో ఎంతో విలువైనవి
             </div>
 
             <div>
@@ -187,17 +218,14 @@
                 </div>
             </div>
 
-            <!-- QR PAYMENT (PRIMARY) -->
             <div class="qr-box">
-                <strong>✅ Scan QR to Pay (Works in all UPI apps)</strong>
+                <strong>Scan QR to Pay (Works in all UPI apps)</strong>
                 <img src="images/upi-qr.jpeg" alt="UPI QR Code">
             </div>
 
-            <!-- CLICKABLE UPI DETAILS -->
             <div class="upi-box">
-                <strong>UPI ID:</strong> <span id="upi">9390199441@ibl</span><br>
-                <strong>Name:</strong> <span id="name">Mutyala Lakshmi</span>
-
+                <strong>UPI ID:</strong> 9390199441@ibl<br>
+                <strong>Name:</strong> Mutyala Lakshmi
                 <button class="copy-btn" onclick="copyUPI()">Copy UPI ID</button>
             </div>
 
@@ -206,17 +234,26 @@
                 View Hospital Documents
             </a>
 
+            <!-- SHARE BUTTONS (TEXT ONLY) -->
+            <div class="share-box">
+                <div class="share-buttons">
+                    <a class="share-whatsapp"
+                        href="https://wa.me/?text=Urgent%20help%20needed%20for%20M.%20Tarun%20Sai.%20Please%20support.%20https://MohanRayapati244.github.io/Help_Tarun/"
+                        target="_blank">WhatsApp</a>
+
+                    <a class="share-facebook"
+                        href="https://www.facebook.com/sharer/sharer.php?u=https://MohanRayapati244.github.io/Help_Tarun/"
+                        target="_blank">Facebook</a>
+
+                    <a class="share-instagram" href="#" onclick="copyLink()">Instagram</a>
+                </div>
+            </div>
+
             <div class="note">
                 <strong>Important Note:</strong><br>
-                • Website payment buttons may fail due to UPI security rules.<br>
-                • Please scan the QR code or manually enter the UPI ID.<br>
-                • Amount goes directly to the child’s mother’s bank account.<br>
-                • No middlemen, no tax deductions.<br><br>
-
-                <strong>ముఖ్య గమనిక:</strong><br>
-                • యూపీఐ భద్రత కారణంగా వెబ్‌సైట్ బటన్లు పనిచేయకపోవచ్చు.<br>
-                • దయచేసి QR కోడ్ స్కాన్ చేయండి లేదా యూపీఐ ఐడీ టైప్ చేయండి.<br>
-                • మొత్తం నేరుగా amma ఖాతాకే జమ అవుతుంది.
+                • Please scan QR or manually enter UPI ID.<br>
+                • Amount goes directly to mother’s bank account.<br>
+                • No middlemen, no tax deductions.
             </div>
 
             <div class="footer">
@@ -230,6 +267,11 @@
         function copyUPI() {
             navigator.clipboard.writeText("9390199441@ibl");
             alert("UPI ID copied. Paste it in your UPI app to pay.");
+        }
+
+        function copyLink() {
+            navigator.clipboard.writeText("https://MohanRayapati244.github.io/Help_Tarun/");
+            alert("Link copied! Paste it on Instagram, WhatsApp, or Facebook.");
         }
     </script>
 
